@@ -1,0 +1,81 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  border: 1px solid $root-border-color;
+  text-align: center;
+  margin-top: 40px;
+  height: 140px;
+
+  .iconWrapper {
+    height: 60px;
+    transform: translateY(-50%);
+    color: $text-color;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      position: relative;
+      z-index: 9;
+    }
+
+    &::before {
+      content: "";
+      border: 1px solid $icon-wrapper-before;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 76px;
+      height: 76px;
+      border-radius: 100%;
+      background-color: $icon-wrapper-before;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid $icon-wrapper-after;
+    }
+  }
+
+  .content {
+    text-transform: uppercase;
+    color: $feature-box-content;
+    margin-top: -0.5rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+
+    a {
+      font-weight: 600;
+      margin: 0;
+    }
+
+  }
+
+  &:hover {
+    .iconWrapper {
+      color: $icon-wrapper-hover;
+
+      &::after {
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+
+    .content {
+      color: $primary;
+    }
+  }
+}
+
+.root + div {
+  float: right;
+}

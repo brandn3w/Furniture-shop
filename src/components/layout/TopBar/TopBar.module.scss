@@ -1,0 +1,68 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $top-bar-root;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      line-height: 55px;
+
+      a {
+        color: $top-bar-a;
+        font-size: 13px;
+
+        &:hover {
+          color: $primary;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .topOptions ul li {
+    margin-right: 1.5rem;    
+
+    .icon {
+      margin-left: 5px;
+    }
+  }
+
+  .topMenu ul li {
+    margin-left: 1.5rem;
+
+    .icon {
+      margin-right: 1px;
+      
+    }
+  }
+}
+
+@media screen and (min-width:320px) and (max-width: 768px){
+  .topMenu ul li{
+    a {
+    font-size:0;
+    }
+    .icon {
+      font-size: 14px;
+      margin:0;
+    }
+  }
+
+  .topOptions{
+  
+  ul  { display: inline-flex;}
+li {display: inline;}
+
+    .icon {
+      margin: 24px 0;
+      position: absolute;
+      
+    }
+  }
+  
+}

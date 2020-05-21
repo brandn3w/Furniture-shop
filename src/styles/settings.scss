@@ -1,0 +1,122 @@
+$base-padding: 24px;
+
+
+$main-bg: #ffffff;
+
+//all colors, all defined variables are used. 01- the darkest hue
+$dark-gray: #434343;
+$darker-dark-gray: #363636;
+$super-dark-gray: #2a2a2a;
+$mega-dark-gray: #292929;
+
+$shadow-gray: rgba(1, 2, 2, 0.2);
+
+$intensive-orange: #d58e32;
+
+$white: #ffffff;
+
+$white-gray: #f4f5f7;
+$almost-white-gray: #e2e2e2;
+$mega-light-gray: #e1e1e1;
+$super-light-gray:#e0e3ed;
+$lighter-light-gray: rgb(216, 216, 216);
+$light-gray: #b6b6b6;
+$gray: rgb(169, 169, 169);
+
+$color-green-1: #80c904;
+
+// variable color assigned to variable by usage
+$company-claim-cart: $super-light-gray;
+$company-claim-cart-box:$white;
+$company-claim-phone: $lighter-light-gray;
+
+$footer-claim: $super-dark-gray;
+$footer-bg: $darker-dark-gray;
+$footer-a-p: $gray;
+$footer-menu-wrapper: $white;
+$footer-a-hover: $white;
+
+$new-furniture-a: $mega-light-gray;
+$new-ferniture-menu:$mega-dark-gray;
+$new-furniture-ul: $white;
+
+$icon-wrapper-before: $light-gray;
+$icon-wrapper-after: $light-gray;
+$icon-wrapper-hover: $white;
+$icon-wrapper-before: $white;
+
+$button-outline-hover: $super-dark-gray;
+$button-outline-border: $super-dark-gray;
+$button-outline-color: $super-dark-gray;
+$button-outline-hover-color: $white;
+
+$product-box-line: $super-dark-gray;
+$product-box-stars: $mega-dark-gray;
+$product-box-sale-text: $white;
+$product-box-root: $mega-light-gray;
+$product-box-photo: $white-gray;
+$product-box-sale: $mega-dark-gray;
+
+$promotion-box: $mega-dark-gray;
+
+$menu-bar-root: $white;
+$menu-bar-a: $white;
+$menu-bar-a-hover-active: $white;
+$menu-bar-shadow: $shadow-gray;
+
+$main-bg: $white;
+$main-color: $white;
+
+$root-bg: $white;
+$root-border-color: $light-gray;
+
+$text-color-light: $white;
+
+$top-bar-root: $dark-gray;
+$top-bar-a: $white;
+
+$brands-component-container: $almost-white-gray;
+$brands-swipe: $super-dark-gray;
+
+$panel-bar-row: $almost-white-gray;
+$product-search-option: $dark-gray;
+$header-bg: $darker-dark-gray;
+$text-color: $super-dark-gray;
+$feature-box-content: $mega-dark-gray;
+$form-border-color: $mega-dark-gray;
+$primary: $intensive-orange;
+$text-color-green: $color-green-1;
+//-----------end--------------------------------
+
+$transition: all 0.25s, background-color 0.25s, color 0.25s;
+
+%btn-hover-base {
+  transition: $transition;
+  position: relative;
+  top:0;
+  &:not(.noHover):hover {
+    top: -5px;
+  }
+}
+
+
+@mixin btn-hover(
+  $hover-color: $text-color-light,
+  $hover-bg-color: $primary,
+  $border-color: currentcolor,
+  ) {
+  @extend %btn-hover-base;
+  &.active,
+  &:not(.noHover):hover {
+    border-color: $border-color;
+    text-decoration: none;
+    background-color: $hover-bg-color;
+    color: $hover-color;
+  }
+}
+
+@mixin flex-center(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
